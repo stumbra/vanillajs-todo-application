@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Todo application</title>
+  </head>
+  <body>
+    <header>Todo List</header>
+    <form>
+      <label for="input1">Task description<span>*</span></label>
+      <input
+        id="input1"
+        type="text"
+        class="todo-description"
+        placeholder="Description.."
+        required
+        maxlength="160"
+      />
+      <label for="input2">Deadline</label>
+      <input id="input2" type="datetime-local" class="todo-expiration" />
+      <button class="todo-button" type="submit">Add</button>
+    </form>
+    <div class="todo-container">
+      <ul class="todo-list"></ul>
+    </div>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <p>Do you really want to delete this task?</p>
+        <button class="confirm-button">Confirm</button>
+        <button class="cancel-button">Cancel</button>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
